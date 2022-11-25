@@ -392,7 +392,7 @@ using some clever transform. For example, you can use a weighted averaging schem
 each pixel has eight immediate neighbours and sixteen
 secondary neighbours; you can use compute a pixel brightness based on whether
 its neighbour pixels are set, weighing closer pixels more heavily. The
-weighting scheme below is one possibility, representing a total weight of 92,
+weighting scheme below is one possibility, representing a total weight of 100,
 that can be applied to a pixel located
 at the center (0,0) by consulting pixels +/- 1 or 2 rows/columns away:
 
