@@ -45,8 +45,8 @@ volatile int *l2_acts = (volatile int *) 0x08802000; /* activations of layer 2 *
 volatile int *l3_acts = (volatile int *) 0x08803000; /* activations of layer 3 (outputs) */
 
 
-//#include "../task4/vga_plot.c"
-#include "vga_plot.c"
+#include "../task4/vga_plot.c"
+//#include "vga_plot.c"
 
 
 
