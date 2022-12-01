@@ -21,7 +21,7 @@ module task4(input logic CLOCK_50, input logic [3:0] KEY, // KEY[3] is async act
                          .vga_vga_blu(VGA_B),
                          .vga_vga_hsync(VGA_HS),
                          .vga_vga_vsync(VGA_VS),
-                         .vga_vga_CLK(VGA_CLK),
+                         .vga_vga_clk(VGA_CLK),
                          .sdram_clk_clk(DRAM_CLK),
                          .sdram_addr(DRAM_ADDR),
                          .sdram_ba(DRAM_BA),
@@ -33,4 +33,5 @@ module task4(input logic CLOCK_50, input logic [3:0] KEY, // KEY[3] is async act
                          .sdram_ras_n(DRAM_RAS_N),
                          .sdram_we_n(DRAM_WE_N),
                          .hex_export(HEX0));
+
 endmodule: task4
