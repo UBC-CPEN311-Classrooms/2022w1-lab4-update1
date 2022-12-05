@@ -5,11 +5,11 @@
  version="1.0"
  fabric="QSYS">
  <!-- Format version 19.1 670 (Future versions may contain additional information.) -->
- <!-- 2022.11.30.21:08:12 -->
+ <!-- 2022.12.04.17:01:24 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1669871292</value>
+  <value>1670202084</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -6265,7 +6265,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="gui_actual_multiply_factor0">
    <type>int</type>
-   <value>10</value>
+   <value>6</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -6281,7 +6281,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="gui_actual_divide_factor0">
    <type>int</type>
-   <value>10</value>
+   <value>6</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -6361,7 +6361,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="gui_actual_multiply_factor1">
    <type>int</type>
-   <value>10</value>
+   <value>6</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -6377,7 +6377,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="gui_actual_divide_factor1">
    <type>int</type>
-   <value>10</value>
+   <value>6</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -6401,7 +6401,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="gui_phase_shift1">
    <type>int</type>
-   <value>-3000</value>
+   <value>0</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -8001,7 +8001,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="phase_shift1">
    <type>java.lang.String</type>
-   <value>-3000 ps</value>
+   <value>0 ps</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -8473,7 +8473,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="m_cnt_hi_div">
    <type>int</type>
-   <value>5</value>
+   <value>3</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -8481,7 +8481,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="m_cnt_lo_div">
    <type>int</type>
-   <value>5</value>
+   <value>3</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -8537,7 +8537,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="c_cnt_hi_div0">
    <type>int</type>
-   <value>5</value>
+   <value>3</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -8545,7 +8545,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="c_cnt_lo_div0">
    <type>int</type>
-   <value>5</value>
+   <value>3</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -8593,7 +8593,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="c_cnt_hi_div1">
    <type>int</type>
-   <value>5</value>
+   <value>3</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -8601,7 +8601,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="c_cnt_lo_div1">
    <type>int</type>
-   <value>5</value>
+   <value>3</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -8609,7 +8609,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="c_cnt_prst1">
    <type>int</type>
-   <value>9</value>
+   <value>1</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -8617,7 +8617,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="c_cnt_ph_mux_prst1">
    <type>int</type>
-   <value>4</value>
+   <value>0</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -9553,7 +9553,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="pll_cp_current">
    <type>int</type>
-   <value>20</value>
+   <value>30</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -9561,7 +9561,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="pll_bwctrl">
    <type>int</type>
-   <value>4000</value>
+   <value>2000</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -9569,7 +9569,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="pll_output_clk_frequency">
    <type>java.lang.String</type>
-   <value>500.0 MHz</value>
+   <value>300.0 MHz</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -9633,7 +9633,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="gui_parameter_values">
    <type>[Ljava.lang.String;</type>
-   <value>5,5,256,256,false,true,false,false,5,5,1,0,ph_mux_clk,false,false,5,5,9,4,ph_mux_clk,false,false,2,20,4000,500.0 MHz,1,none,glb,m_cnt,ph_mux_clk,false</value>
+   <value>3,3,256,256,false,true,false,false,3,3,1,0,ph_mux_clk,false,false,3,3,1,0,ph_mux_clk,false,false,2,30,2000,300.0 MHz,1,none,glb,m_cnt,ph_mux_clk,false</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -13598,6 +13598,33 @@ parameters are a RESULT of the module parameters. -->
   <endModule>onchip_memory2_0</endModule>
   <endConnectionPoint>reset1</endConnectionPoint>
  </connection>
+ <connection
+   name="dnn_accel_system.debug_reset_request/word_copy_interface_0.reset_sink"
+   kind="reset"
+   version="19.1"
+   start="dnn_accel_system.debug_reset_request"
+   end="word_copy_interface_0.reset_sink">
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>dnn_accel_system</startModule>
+  <startConnectionPoint>debug_reset_request</startConnectionPoint>
+  <endModule>word_copy_interface_0</endModule>
+  <endConnectionPoint>reset_sink</endConnectionPoint>
+ </connection>
  <plugin>
   <instanceCount>1</instanceCount>
   <name>clock_source</name>
@@ -13807,7 +13834,7 @@ parameters are a RESULT of the module parameters. -->
   <version>19.1</version>
  </plugin>
  <plugin>
-  <instanceCount>13</instanceCount>
+  <instanceCount>14</instanceCount>
   <name>reset</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>

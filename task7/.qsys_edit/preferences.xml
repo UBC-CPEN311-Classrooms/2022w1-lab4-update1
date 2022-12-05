@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="223" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <library expandedCategories="Project/Custom IPs,Project,Library" />
+ <window width="1552" height="840" x="-1928" y="-8" />
+ <generation
+   path="C:/Users/ysmal/Desktop/General/UBC/CPEN_311/2022w1-lab4-update1/task7/_PROJECT_NAME_"
+   simulation="VERILOG" />
+</preferences>

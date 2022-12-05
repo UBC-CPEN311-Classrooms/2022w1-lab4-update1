@@ -13,17 +13,17 @@ preplace inst dnn_accel_system.pio_0 -pg 1 -lvl 2 -y 180
 preplace inst dnn_accel_system.dnn_accel_system -pg 1 -lvl 1 -y 90
 preplace inst dnn_accel_system.clk_0 -pg 1 -lvl 1 -y 680
 preplace inst dnn_accel_system.dnn_accel_system.cpu -pg 1
+preplace netloc INTERCONNECT<net_container>dnn_accel_system</net_container>(MASTER)dnn_accel_system.instruction_master,(SLAVE)dnn_accel_system.debug_mem_slave,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)sdram_controller.s1,(MASTER)word_copy_interface_0.avalon_master,(MASTER)dnn_accel_system.data_master,(SLAVE)onchip_memory2_0.s1,(SLAVE)pio_0.s1,(SLAVE)vga_avalon.avalon_slave_0,(SLAVE)word_copy_interface_0.slave) 1 0 4 110 30 510 570 770 390 1050
 preplace netloc EXPORT<net_container>dnn_accel_system</net_container>(MASTER)dnn_accel_system.sdram_clk,(MASTER)pll_0.outclk1) 1 2 2 NJ 690 NJ
-preplace netloc INTERCONNECT<net_container>dnn_accel_system</net_container>(SLAVE)vga_avalon.reset,(SLAVE)onchip_memory2_0.reset1,(MASTER)clk_0.clk_reset,(SLAVE)sdram_controller.reset,(SLAVE)dnn_accel_system.reset,(SLAVE)pio_0.reset,(SLAVE)pll_0.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)word_copy_interface_0.reset_sink,(MASTER)dnn_accel_system.debug_reset_request) 1 0 3 130 230 570 590 810
-preplace netloc FAN_OUT<net_container>dnn_accel_system</net_container>(SLAVE)dnn_accel_system.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)sdram_controller.clk,(MASTER)pll_0.outclk0,(SLAVE)pio_0.clk,(SLAVE)vga_avalon.clock,(SLAVE)jtag_uart_0.clk,(SLAVE)word_copy_interface_0.clock) 1 0 3 130 50 550 410 790
+preplace netloc EXPORT<net_container>dnn_accel_system</net_container>(SLAVE)pio_0.external_connection,(SLAVE)dnn_accel_system.hex) 1 0 2 NJ 250 NJ
+preplace netloc EXPORT<net_container>dnn_accel_system</net_container>(SLAVE)dnn_accel_system.pll_locked,(SLAVE)pll_0.locked) 1 0 2 NJ 670 NJ
 preplace netloc EXPORT<net_container>dnn_accel_system</net_container>(SLAVE)dnn_accel_system.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc EXPORT<net_container>dnn_accel_system</net_container>(SLAVE)vga_avalon.conduit_end,(SLAVE)dnn_accel_system.vga) 1 0 3 NJ 570 NJ 570 NJ
-preplace netloc EXPORT<net_container>dnn_accel_system</net_container>(SLAVE)dnn_accel_system.hex,(SLAVE)pio_0.external_connection) 1 0 2 NJ 250 NJ
-preplace netloc INTERCONNECT<net_container>dnn_accel_system</net_container>(MASTER)dnn_accel_system.data_master,(MASTER)word_copy_interface_0.avalon_master,(SLAVE)dnn_accel_system.debug_mem_slave,(SLAVE)vga_avalon.avalon_slave_0,(SLAVE)sdram_controller.s1,(MASTER)dnn_accel_system.instruction_master,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)pio_0.s1,(SLAVE)word_copy_interface_0.slave,(SLAVE)onchip_memory2_0.s1) 1 0 4 110 30 510 550 770 490 1030
-preplace netloc EXPORT<net_container>dnn_accel_system</net_container>(SLAVE)pll_0.locked,(SLAVE)dnn_accel_system.pll_locked) 1 0 2 NJ 670 NJ
+preplace netloc FAN_OUT<net_container>dnn_accel_system</net_container>(SLAVE)word_copy_interface_0.clock,(SLAVE)dnn_accel_system.clk,(SLAVE)jtag_uart_0.clk,(MASTER)pll_0.outclk0,(SLAVE)sdram_controller.clk,(SLAVE)pio_0.clk,(SLAVE)vga_avalon.clock,(SLAVE)onchip_memory2_0.clk1) 1 0 3 130 50 550 550 790
+preplace netloc INTERCONNECT<net_container>dnn_accel_system</net_container>(SLAVE)onchip_memory2_0.reset1,(SLAVE)vga_avalon.reset,(MASTER)clk_0.clk_reset,(SLAVE)dnn_accel_system.reset,(MASTER)dnn_accel_system.debug_reset_request,(SLAVE)word_copy_interface_0.reset_sink,(SLAVE)pio_0.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)sdram_controller.reset,(SLAVE)pll_0.reset) 1 0 3 130 230 570 610 830
+preplace netloc EXPORT<net_container>dnn_accel_system</net_container>(SLAVE)vga_avalon.conduit_end,(SLAVE)dnn_accel_system.vga) 1 0 3 NJ 590 NJ 590 NJ
+preplace netloc POINT_TO_POINT<net_container>dnn_accel_system</net_container>(MASTER)clk_0.clk,(SLAVE)pll_0.refclk) 1 1 1 N
 preplace netloc EXPORT<net_container>dnn_accel_system</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)dnn_accel_system.reset) 1 0 1 NJ
-preplace netloc POINT_TO_POINT<net_container>dnn_accel_system</net_container>(SLAVE)pll_0.refclk,(MASTER)clk_0.clk) 1 1 1 N
 preplace netloc EXPORT<net_container>dnn_accel_system</net_container>(SLAVE)sdram_controller.wire,(SLAVE)dnn_accel_system.sdram) 1 0 2 NJ 510 NJ
 preplace netloc POINT_TO_POINT<net_container>dnn_accel_system</net_container>(SLAVE)jtag_uart_0.irq,(MASTER)dnn_accel_system.irq) 1 1 1 530
-levelinfo -pg 1 0 80 1140
-levelinfo -hier dnn_accel_system 90 250 620 840 1050
+levelinfo -pg 1 0 80 1160
+levelinfo -hier dnn_accel_system 90 250 620 860 1070

@@ -192,7 +192,7 @@ https://fpgasoftware.intel.com/eula.
 		(text "vga_hsync" (rect 117 403 288 816)(font "Arial" (color 0 0 0)))
 		(text "vga_red" (rect 117 419 276 848)(font "Arial" (color 0 0 0)))
 		(text "vga_vsync" (rect 117 435 288 880)(font "Arial" (color 0 0 0)))
-		(text " dnn_accel_system " (rect 236 456 580 922)(font "Arial" ))
+		(text " system " (rect 285 456 618 922)(font "Arial" ))
 		(line (pt 112 32)(pt 208 32)(line_width 1))
 		(line (pt 208 32)(pt 208 456)(line_width 1))
 		(line (pt 112 456)(pt 208 456)(line_width 1))

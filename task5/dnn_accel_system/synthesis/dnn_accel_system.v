@@ -95,10 +95,10 @@ module dnn_accel_system (
 	wire  [31:0] mm_interconnect_0_word_copy_interface_0_slave_writedata;        // mm_interconnect_0:word_copy_interface_0_slave_writedata -> word_copy_interface_0:slave_writedata
 	wire         irq_mapper_receiver0_irq;                                       // jtag_uart_0:av_irq -> irq_mapper:receiver0_irq
 	wire  [31:0] dnn_accel_system_irq_irq;                                       // irq_mapper:sender_irq -> dnn_accel_system:irq
-	wire         rst_controller_reset_out_reset;                                 // rst_controller:reset_out -> [dnn_accel_system:reset_n, irq_mapper:reset, jtag_uart_0:rst_n, mm_interconnect_0:dnn_accel_system_reset_reset_bridge_in_reset_reset, onchip_memory2_0:reset, pio_0:reset_n, rst_translator:in_reset, sdram_controller:reset_n]
+	wire         rst_controller_reset_out_reset;                                 // rst_controller:reset_out -> [dnn_accel_system:reset_n, irq_mapper:reset, jtag_uart_0:rst_n, mm_interconnect_0:word_copy_interface_0_reset_sink_reset_bridge_in_reset_reset, onchip_memory2_0:reset, pio_0:reset_n, rst_translator:in_reset, sdram_controller:reset_n, word_copy_interface_0:rst_n]
 	wire         rst_controller_reset_out_reset_req;                             // rst_controller:reset_req -> [dnn_accel_system:reset_req, onchip_memory2_0:reset_req, rst_translator:reset_req_in]
 	wire         dnn_accel_system_debug_reset_request_reset;                     // dnn_accel_system:debug_reset_request -> rst_controller:reset_in1
-	wire         rst_controller_001_reset_out_reset;                             // rst_controller_001:reset_out -> [mm_interconnect_0:word_copy_interface_0_reset_sink_reset_bridge_in_reset_reset, vga_avalon:reset_n, word_copy_interface_0:rst_n]
+	wire         rst_controller_001_reset_out_reset;                             // rst_controller_001:reset_out -> [mm_interconnect_0:vga_avalon_reset_reset_bridge_in_reset_reset, vga_avalon:reset_n]
 
 	dnn_accel_system_dnn_accel_system dnn_accel_system (
 		.clk                                 (pll_0_outclk0_clk),                                              //                       clk.clk
@@ -229,13 +229,13 @@ module dnn_accel_system (
 		.master_readdatavalid (word_copy_interface_0_avalon_master_readdatavalid),         //              .readdatavalid
 		.master_write         (word_copy_interface_0_avalon_master_write),                 //              .write
 		.master_writedata     (word_copy_interface_0_avalon_master_writedata),             //              .writedata
-		.rst_n                (~rst_controller_001_reset_out_reset)                        //    reset_sink.reset_n
+		.rst_n                (~rst_controller_reset_out_reset)                            //    reset_sink.reset_n
 	);
 
 	dnn_accel_system_mm_interconnect_0 mm_interconnect_0 (
 		.pll_0_outclk0_clk                                            (pll_0_outclk0_clk),                                              //                                          pll_0_outclk0.clk
-		.dnn_accel_system_reset_reset_bridge_in_reset_reset           (rst_controller_reset_out_reset),                                 //           dnn_accel_system_reset_reset_bridge_in_reset.reset
-		.word_copy_interface_0_reset_sink_reset_bridge_in_reset_reset (rst_controller_001_reset_out_reset),                             // word_copy_interface_0_reset_sink_reset_bridge_in_reset.reset
+		.vga_avalon_reset_reset_bridge_in_reset_reset                 (rst_controller_001_reset_out_reset),                             //                 vga_avalon_reset_reset_bridge_in_reset.reset
+		.word_copy_interface_0_reset_sink_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                                 // word_copy_interface_0_reset_sink_reset_bridge_in_reset.reset
 		.dnn_accel_system_data_master_address                         (dnn_accel_system_data_master_address),                           //                           dnn_accel_system_data_master.address
 		.dnn_accel_system_data_master_waitrequest                     (dnn_accel_system_data_master_waitrequest),                       //                                                       .waitrequest
 		.dnn_accel_system_data_master_byteenable                      (dnn_accel_system_data_master_byteenable),                        //                                                       .byteenable

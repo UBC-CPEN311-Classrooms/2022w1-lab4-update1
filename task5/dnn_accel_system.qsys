@@ -587,7 +587,7 @@
   <parameter name="gui_output_clock_frequency8" value="100.0" />
   <parameter name="gui_output_clock_frequency9" value="100.0" />
   <parameter name="gui_phase_shift0" value="0" />
-  <parameter name="gui_phase_shift1" value="-3000" />
+  <parameter name="gui_phase_shift1" value="0" />
   <parameter name="gui_phase_shift10" value="0" />
   <parameter name="gui_phase_shift11" value="0" />
   <parameter name="gui_phase_shift12" value="0" />
@@ -873,6 +873,11 @@
    version="19.1"
    start="dnn_accel_system.debug_reset_request"
    end="onchip_memory2_0.reset1" />
+ <connection
+   kind="reset"
+   version="19.1"
+   start="dnn_accel_system.debug_reset_request"
+   end="word_copy_interface_0.reset_sink" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />

@@ -101,10 +101,6 @@ void wordcopy( volatile int *dst, volatile int *src, int n_words )
   #endif
 }
 
-
-
-
-
 // ----------------------------------------------------------------
 // Two ways of computing dot product
 
@@ -133,8 +129,6 @@ int dotprod_sw(int n_in, volatile int *w, volatile int *ifmap)
         }
         return sum;
 }
-
-
 
 // ----------------------------------------------------------------
 
@@ -170,8 +164,6 @@ void apply_layer_act(int n_in, int n_out, volatile int *b, volatile int *w, int 
     *act_acc; /* make sure the accelerator is finished */
 }
 
-
-
 // ----------------------------------------------------------------
 
 int max_index(int n_in, volatile int *ifmap)
@@ -198,8 +190,6 @@ void display_image( volatile int *image, int rows, int cols, int min_pixel_value
         }
     }
 }
-
-
 
 int main()
 {
@@ -250,25 +240,29 @@ int main()
     // write code here to test wordcopy software versus wordcopy hardware
     // use something like: wordcopy( copy_to_here, input, L1_IN );
     //    where 'L1_IN' is the amount of data to copy from address 'input'
-
+/*
     volatile int * store = nn;
     //printf("Address: %ls\n", store);
 
     for(int offset = 0; offset < 1600; offset++){
-      *(store + offset) = offset + 1;
+      *(store + offset) = (offset + 1)*4;
       //printf("Value: %d\n", *(store + offset));
     }
     wordcopy((volatile int *) 0x8001900, store, 1600 );
+    if(*wordcopy_acc == 100)
+      result = 1;
+*/
 
-    for(int offset = 0; offset < 1600; offset++){
-      if(*((volatile int *) 0x8001900 + offset) != offset + 1){
-        result = 0;
-        break;
-      } else {
-        result = 1; // use this to print "1" to indicate "correct" on 7seg
-      }
-      //printf("Value: %d\n", *(store + offset));
-    }
+    wordcopy(input, (volatile int *) 0x09000000, L1_IN);
+    // for(int offset = 0; offset < 1600; offset++){
+    //   if(*((volatile int *) 0x8001900 + offset) != offset + 1){
+    //     result = 0;
+    //     break;
+    //   } else {
+    //     result = 1; // use this to print "1" to indicate "correct" on 7seg
+    //   }
+    //   //printf("Value: %d\n", *(store + offset));
+    // }
   #endif
 
     *hex = hex7seg( result );
